@@ -20,10 +20,18 @@ const WelcomePage = () => {
           y:[-7,0,-7],
         }}
         transition={{bounceDamping: 20, duration: 2, repeat: Infinity}}
-        className="text-xl font-bold text-slate-300 text-center">
+        className="text-xl font-bold dark:text-slate-300 text-slate-800 text-center">
           Hi there,{' '}
           <ReactTyped
-            strings={['My name is David','I am a Software Developer','I am a FullStack Developer','I love Coding']}
+            strings={[
+            'My name is Ayokanmbi David (Dayvid)',
+            'I am a Fullstack Software Developer',
+            'I love Coding',
+            'The best so far',
+            'Passionate and Considerate',
+            'Contact me on 09024572602',
+            'My Email is davidayokanmbi47@gmail.com'
+          ]}
             typeSpeed={60}
             backSpeed={60}
             loop={true}

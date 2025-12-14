@@ -1,5 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 const Navbar = React.lazy(() => import('./components/Navbar.jsx'));
 const Home = React.lazy(() => import('./pages/Home.jsx'));
@@ -8,6 +8,18 @@ const Works = React.lazy(() => import('./pages/Works.jsx'));
 const Skills = React.lazy(() => import('./pages/Skills.jsx'));
 
 export default function App() {
+    const htmlElement = document.documentElement;
+
+    const useTheme = JSON.parse(localStorage.getItem('port-theme')) || 'light'
+
+    useEffect(() => {
+      if(useTheme == 'dark'){
+        htmlElement.classList.add('dark');
+      } else {
+        htmlElement.classList.remove('dark');
+      }
+    }, []);
+
 
   return (
     <>

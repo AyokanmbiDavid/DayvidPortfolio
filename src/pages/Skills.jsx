@@ -10,9 +10,9 @@ const Skills = () => {
     return(
       <>
         <div
-        className='w-full rounded-xl bg-slate-700 p-2 my-2'
+        className='w-full rounded-xl p-2 my-2'
         >
-          <h1 className="text-md text-slate-300">
+          <h1 className="text-md dark:text-slate-300 text-slate-800">
             Frontend
           </h1>
 
@@ -25,17 +25,17 @@ const Skills = () => {
                 key={i}
                 onMouseOver={() => setFrontHovered(frontendSkills.indexOf(e))}
                 onMouseLeave={() => setFrontHovered()}
-                className='w-[200px] relative max-md:w-[150px] py-5 rounded-full bg-slate-800 text-center
-                gap-3 cursor-pointer'>
-                 <h1 className="text-lg text-slate-100 ">
+                className='w-full relative max-md:w-[150px] py-5 rounded-3xl border-3 border-slate-300 dark:border-slate-600 text-center
+                gap-3 cursor-pointer '>
+                 <h1 className="text-lg dark:text-slate-300 text-slate-600">
                    {e.name}
                  </h1>
                   {frontHoveredIndex == frontendSkills.indexOf(e) &&
                   <motion.div
                   initial={{y:100}}
                   animate={{y:-40}}
-                  className="absolute top-1/2 right-2 py-4 px-3 bg-slate-600 rounded-full z-0
-                  max-w-[170px]">
+                  className="absolute top-1/2 right-2 py-4 px-3 bg-slate-600 rounded-3xl z-0
+                  max-w-full text-white">
                     {e.desc}
                   </motion.div>}
                 </motion.div>
@@ -67,17 +67,17 @@ const Skills = () => {
                 key={i}
                 onMouseOver={() => setBackHovered(backendSkills.indexOf(e))}
                 onMouseLeave={() => setBackHovered()}
-                className='w-[200px] relative max-md:w-[150px] py-5 rounded-full bg-slate-700 text-center
+                className='w-full relative max-md:w-[150px] py-5 rounded-3xl text-center border-3 border-slate-500 dark:border-slate-500
                 gap-3 cursor-pointer'>
-                 <h1 className="text-lg text-slate-100 ">
+                 <h1 className="text-lg text-slate-900 dark:text-slate-100 ">
                    {e.name}
                  </h1>
                   {backHoveredIndex == backendSkills.indexOf(e) &&
                   <motion.div
                   initial={{y:100}}
                   animate={{y:-40}}
-                  className="absolute top-1/2 right-2 py-4 px-3 bg-slate-800 rounded-full z-0
-                  max-w-[170px]">
+                  className="absolute top-1/2 right-2 py-4 px-3 bg-slate-600 rounded-full z-0
+                  max-w-full text-white">
                     {e.desc}
                   </motion.div>}
                 </motion.div>
@@ -98,7 +98,7 @@ const Skills = () => {
       animate={{opacity: 1}}
       transition={{duration:0.7,}}
       className='w-full p-2'>
-        <h1 className="text-lg font-bold text-slate-300">
+        <h1 className="text-lg font-bold text-slate-800 dark:text-slate-300">
           My Skills
         </h1>
 
