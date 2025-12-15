@@ -24,7 +24,7 @@ export default function App() {
   return (
     <>
     <Navbar/>
-    <div className="mt-15">
+    <div className="mt-15 mx-40 max-lg:mx-0">
       <Routes>
           <Route path='/' element={<Home/>} />
           <Route path='/message' element={<Message/>} />

@@ -8,19 +8,17 @@ const WelcomePage = () => {
   return (
     <>
       <motion.div 
-      initial={{opacity:0.2}}
-      animate={{opacity:1}}
-      transition={{duration:0.6, ease:"easeIn"}}
+      initial={{y: -60}}
+      whileInView={{
+        y:0
+      }}
+      viewport={{once: false, amount:0.7}}
       className="w-full p-2 flex max-md:flex-col items-center gap-4">
           <div className="border border-slate-800 w-[150px] h-[150px] rounded-full ">
             <img src={ProfilePic} className="object-cover w-full rounded-full h-full" />
           </div>
-        <motion.h1
-        animate={{
-          y:[-7,0,-7],
-        }}
-        transition={{bounceDamping: 20, duration: 2, repeat: Infinity}}
-        className="text-xl font-bold dark:text-slate-300 text-slate-800 text-center">
+        <h1
+        className="text-xl font-bold dark:text-purple-300 text-purple-800 text-center">
           Hi there,{' '}
           <ReactTyped
             strings={[
@@ -35,8 +33,9 @@ const WelcomePage = () => {
             typeSpeed={60}
             backSpeed={60}
             loop={true}
-          />
-        </motion.h1>
+          /> 
+        </h1>
+          <div className="w-5 h-5 rounded-lg border-2 border-purple-500 dark:border-purple-600 max-lg:hidden -ml-2 shadow-xl"></div>
       </motion.div>
     </>
   )
